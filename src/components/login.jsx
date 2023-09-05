@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import * as Components from './Components';
 import { useNavigate, useParams } from 'react-router-dom'
 import hostWeb from "../apis/hostWeb";
+import AuthContext from "../context/AuthProvider";
+
 
 const LogIn = () => {
+    const {auth,setAuth} = useContext(AuthContext);
     const navigate = useNavigate();
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
+    useEffect(() => {
+        window.localStorage.setItem('MY_APP_STATE', JSON.stringify(auth));
+      }, [auth]);
     const verifyAcc = async (e)=>{
         e.preventDefault();
         try {
             const response = await hostWeb.post(`/auth/login`,{email,password});
-            console.log(response.data.success);
+            setAuth(response.data.data);
             if(response.data.success){
                 navigate(`/home`);
             }
