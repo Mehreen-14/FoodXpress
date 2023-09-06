@@ -7,7 +7,7 @@ import hostWeb from "../apis/hostWeb";
 function categorylist(items) {
 
       return (
-                <RestaurantCard data={items}/>
+            <RestaurantCard data={items}/>
       )
 }
 
@@ -26,7 +26,7 @@ function RestaurantList(props) {
     },[]);
       return (
       <div className="menu">
-            <div className="restaurant-list-header">Resturent Nearby Your Area</div>
+            <div className="restaurant-list-header">Restaurants Near You</div>
             <div className="restaurentlistcontainer">
                   {data.map(categorylist)}
             </div>

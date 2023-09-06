@@ -38,7 +38,7 @@ const LogIn = () => {
                       <Components.Input value={email} onChange={(e) => setEmail(e.target.value)}  type='email' placeholder='Email' />
                       <Components.Input value={password} onChange={(e) => setPassword(e.target.value)} type='password' placeholder='Password' />
                       <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
-                      <button onClick={verifyAcc} className="btn btn-primary">Sign In</button>
+                      <Components.Button onClick={verifyAcc} className="btn btn-primary">Sign In</Components.Button>
             </Components.Form>
     )
 }

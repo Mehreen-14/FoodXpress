@@ -1,21 +1,38 @@
-import React from "react";
+import React, { useContext, useEffect, useState} from 'react'
 import "../css/sidebar.css"
 import {Home,LocationOn,Article} from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
+import AuthContext from '../context/AuthProvider';
 
 function Sidebar(props)
 {
+    const {auth, setAuth} = useContext(AuthContext);
+    const [data,setData] = useState({});
+    useEffect(() => {
+        const datat = window.localStorage.getItem('MY_APP_STATE');
+        setData(JSON.parse(datat));
+    },[]);
     const navigate = useNavigate();
     const gotohome = () => {
         navigate(`/home`);
     }
+
+    const logout = async(e) => {
+        e.preventDefault();
+
+        setAuth({});
+        window.localStorage.removeItem('MY_APP_STATE');
+        navigate(`/`);
+    }
+
+
     return(
         <div className="sidebar">
            <div className="Up">
               <div className="Title">FoodXpress</div>
               <div classNam="profile">
-              <img src="https://www.hollywoodreporter.com/wp-content/uploads/2021/08/GettyImages-1205210191-H-2021.jpg?w=1296" alt="profile"/>
-              <div className="profileName"><p>Majisha jahan</p></div>
+              <img src="https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" alt="profile"/>
+              <div className="profileName"><p>{data.name}</p></div>
               </div>
               
               
@@ -26,7 +43,7 @@ function Sidebar(props)
             <button className="Option"><Article className="Icon"/>Previous Orders</button>
            </div>
            <div className="Down">
-            <button className="logoutbutton">Log out</button>
+            <button className="logoutbutton" onClick={logout}>Log out</button>
            </div>
         </div>
     )

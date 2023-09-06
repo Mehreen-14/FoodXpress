@@ -21,7 +21,7 @@ function Welcome() {
                  <Components.LeftOverlayPanel signinIn={signIn}>
                      <Components.Title>Hello There</Components.Title>
                      <Components.Paragraph>
-                         To keep connected with us please login with your personal info
+                         Already have an account?
                      </Components.Paragraph>
                      <Components.GhostButton onClick={() => toggle(true)}>
                          Sign In
@@ -31,7 +31,7 @@ function Welcome() {
                      <Components.RightOverlayPanel signinIn={signIn}>
                        <Components.Title>FoodXpress</Components.Title>
                        <Components.Paragraph>
-                           Enter Your personal details and start journey with us
+                           Don't have an account?
                        </Components.Paragraph>
                            <Components.GhostButton onClick={() => toggle(false)}>
                                Sign Up

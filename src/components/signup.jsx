@@ -6,7 +6,7 @@ const SignUp = () => {
     return (
 
         <Components.Form>
-            <Components.Title>Create Account</Components.Title>
+            <Components.Title>Sign up</Components.Title>
             <Components.Input type='text' placeholder='Name' />
             <Components.Input type='email' placeholder='Email' />
             <Components.Input type='password' placeholder='Password' />

@@ -7,6 +7,14 @@
 
 .searchBox{
     height: 3em;
-    width: 40em;
+    width: 50em;
     margin: 1em;
+    background-color: #f9f7f7;
+    border-color: #d0d0d0;
+    border-radius: 10em;
+    padding-left: 1em;
+}
+
+.searchBox::placeholder{
+    color: #909090;
 }

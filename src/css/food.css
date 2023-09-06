@@ -1,6 +1,6 @@
 .foodContainer
 {
-     margin:0.5rem  0.5rem;
+     margin:1rem 1rem;
      border-radius:1rem;
      height: 15rem;
      width:15rem;
@@ -43,6 +43,7 @@
     background-color:rgb(10, 35, 32);
     border-style: none;
     color: white;
+    aspect-ratio: 1;
     border-radius:100% ;
 }
 .food
@@ -65,7 +66,8 @@
 {
     font-weight: bold;
     margin: 0.5rem 0;
-    height: 2rem;
+    height: 3rem;
+
 }
 .fooddescription
 {
