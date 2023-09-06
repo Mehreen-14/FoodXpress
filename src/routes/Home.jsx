@@ -1,10 +1,15 @@
 import React from 'react'
-import Test from '../components/test'
+import Sidebar from '../components/SideBar'
+import SearchBar from '../components/SearchBar'
+import RestaurantList from '../components/RestaurantList'
+import { useLocation } from 'react-router-dom'
 
 const Home = () => {
   return (
     <div>
-      <Test/>
+      <Sidebar/>
+      <SearchBar/>
+      <RestaurantList /> 
     </div>
   )
 }

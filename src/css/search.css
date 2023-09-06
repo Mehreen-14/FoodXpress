@@ -1,0 +1,12 @@
+.searchContainer{
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    background-color: white;
+}
+
+.searchBox{
+    height: 3em;
+    width: 40em;
+    margin: 1em;
+}

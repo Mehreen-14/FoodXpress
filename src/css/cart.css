@@ -1,0 +1,76 @@
+.cartContainer
+{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 2rem;
+    margin: 1rem;
+   
+    
+}
+.foodinfo img{
+    height: 3rem;
+    width:3rem;
+    border-radius: 100%;
+    object-fit: contain;
+    flex:1;
+}
+.description
+{
+  
+   
+    
+    flex:3;
+    text-align: left;
+}
+
+.foodinfo
+{
+    flex:4;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.MoneyPlusChangeitemNumber
+{
+    flex:1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.showMoney
+{
+    flex:3;
+    text-align: center;
+    font-weight: bold;
+    padding-left:0.5rem;
+}
+.itemChange
+{
+    flex:0.5;
+    display: flex;
+    margin:0  1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.removeadd
+{
+    margin:0 0.5rem;
+    margin-bottom: 0.5rem;
+    border-width: 0;
+    border-radius:100%;
+    height:1rem;
+    width: 1rem;
+    
+}
+.itemNumber
+{
+    border: 0.5px solid;
+    padding: 0.1rem 0.3rem;
+    border-color: gray;
+    margin-bottom: 0.5rem;
+    height: 1rem;
+    font-size:1rem;
+}

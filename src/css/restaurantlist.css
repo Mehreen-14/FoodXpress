@@ -1,0 +1,13 @@
+.restaurentlistcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+.restaurant-list-header{
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: xx-large;
+}
+.searchcountshow{
+    font-size: medium;
+    color: gray;
+}

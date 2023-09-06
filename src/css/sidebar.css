@@ -1,0 +1,193 @@
+
+.sidebar
+{
+    flex:2;
+    background-color:rgb(10, 35, 32);
+    height:100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position:fixed;
+    left:  0;
+   text-align: center;
+
+
+}
+.UP
+{
+    flex:4;
+    
+}
+.Title
+{
+    margin-top: 2rem;
+    font-size:2rem;
+    margin-bottom:2rem;
+}
+.profile
+{   
+    
+    font-size: 1.1rem;
+    font-weight:lighter;
+    
+}
+.Up img{
+    margin:0 2rem;
+    border-radius: 100%;
+    object-fit: cover;
+    height: 5rem;
+    width: 5rem;
+    /* float:inline-end; */
+}
+.profileName
+{
+    margin-top: 1.5rem;
+  
+   
+}
+.Mid
+{
+    margin: 5rem auto;
+    flex:6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    
+}
+.Option
+{
+    width: 15rem;
+    margin: 1rem;
+    height: 3rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    outline: none;
+    border-width: 0;
+    color: white;
+    border-radius: 1rem;
+}
+.Option:focus
+{
+    background-color: rgb(54, 122, 226);
+}
+.Option:hover
+{
+    background-color:  rgb(54, 122, 226);
+}
+.Icon
+{
+    margin-left: 2rem;
+    margin-right:0.5rem;
+    margin-top: -0.3rem;
+}
+.Down
+{
+    flex:4;
+}
+.logoutbutton
+{
+    background-color: transparent;
+    outline: none;
+    color: white;
+    border-radius: 1rem;
+    width: 7rem;
+    height: 2rem;
+}
+.logoutbutton:hover
+{
+    background-color:  rgb(54, 122, 226);
+    border-width: 0;
+}
+/* .topbarLeft
+{
+    flex: 5;
+    margin-left: 50px;
+    cursor: pointer;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 20px;
+   
+}
+.topbarCenter
+{
+   flex: 6;
+   height: 50px;
+   display: flex;
+   align-items: center;
+}
+.searchbarContainer
+{
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+ 
+ 
+  background-color: white;
+  display: flex;
+  align-items: center;
+  
+}
+.searchbar
+{
+    border: none;
+    width: 80%;
+    font-family: cursive;
+}
+.searchbarIcon
+{
+    color: black;
+    margin-left: 10px;
+    font-size: 20px !important;
+}
+.searchbar:focus
+{
+    outline: none;
+}
+.topbarRight
+{
+   flex: 7;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.link
+{
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.Icon{
+    display: flex;
+}
+.IconItem{
+    position: relative;
+    margin:10px;
+    cursor: pointer;
+}
+.Iconbadge
+{
+    position: absolute;
+    display: flex;
+    height:15px;
+    width: 15px;
+    background-color: red;
+    align-items:center;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
+    font-size: 10px;
+    justify-content: center;
+}
+.Profile img
+{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+   cursor: pointer;
+   border-radius: 50%;
+} */
