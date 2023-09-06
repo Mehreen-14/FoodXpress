@@ -62,47 +62,7 @@ const Cartinfo=
       MoneyperPiece:250,
       img:"",
       count:3
-  },
-  {
-    foodname:"supreme cheese Burger",
-    Restaurantname:"Chillox",
-    MoneyperPiece:250,
-    id:5,
-    img:"",
-    count:3
-},
-{
-  foodname:"supreme cheese Burger",
-  Restaurantname:"Chillox",
-  MoneyperPiece:250,
-  id:6,
-  img:"",
-  count:3
-},
-{
-  foodname:"supreme cheese Burger",
-  Restaurantname:"Chillox",
-  MoneyperPiece:250,
-  id:7,
-  img:"",
-  count:3
-},
-{
-  foodname:"supreme cheese Burger",
-  Restaurantname:"Chillox",
-  MoneyperPiece:250,
-  id:8,
-  img:"",
-  count:3
-},
-{
-  foodname:"supreme cheese Burger",
-  Restaurantname:"Chillox",
-  MoneyperPiece:250,
-  id:9,
-  img:"",
-  count:3
-}
+  }
 
 ];
 

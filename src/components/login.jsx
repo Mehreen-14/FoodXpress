@@ -18,8 +18,12 @@ const LogIn = () => {
         try {
             const response = await hostWeb.post(`/auth/login`,{email,password});
             setAuth(response.data.data);
+            console.log(response.data.data.type);
             if(response.data.success){
-                navigate(`/home`);
+                if(response.data.data.type == "customer")
+                    navigate(`/home`);
+                else if(response.data.data.type == "restaurant")
+                    navigate(`restauranthome/${response.data.data.user_id}`);
             }
 
         } catch (error) {

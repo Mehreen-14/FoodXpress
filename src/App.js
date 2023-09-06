@@ -6,6 +6,7 @@ import Home from "./routes/Home.jsx";
 import Restaurant from "./routes/Restaurant.jsx";
 import { AuthProvider } from "./context/AuthProvider.jsx";
 import Search from "./routes/Search.jsx"
+import RestaurantHome from "./routes/RestaurantHome.jsx";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                         <Route exact path="/home" Component={Home}/>
                         <Route exact path="/restaurant/:id" Component={Restaurant}/>
                         <Route exact path="/search/:param" Component={Search}/>
+                        <Route exact path="/restauranthome/:id" Component={RestaurantHome}/>
                     </Routes >
                 </Router>
             </AuthProvider>
