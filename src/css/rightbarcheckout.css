@@ -1,21 +1,18 @@
 .rightbarcheckout
 {
-
+    top: 0px;
     flex:2;
-    margin-top: -42rem;
     height: 100vh;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-right:1rem;
+    padding:1rem;
     color:#0a2320;
-    margin-left: 95rem;
+    margin-left: 80%;
     display: 'flex';
     justify-content: 'flex-end';
     flex-direction: column;
     position:fixed;
     
 }
-.Icons
+.rightbarcheckoutIcons
 {
    
   
@@ -24,7 +21,7 @@
    /* justify-content: space-around; */
    align-items: center;
 }
-.IconItem{
+.rightbarcheckoutIconItem{
 
     position: relative;
     cursor: pointer;
@@ -38,7 +35,7 @@
     outline: none;
    
 }
-.Iconbadge
+.rightbarcheckoutIconbadge
 {
     position: absolute;
     display: flex;
@@ -104,9 +101,9 @@
     font-size:1rem;
 }
 
-.box {
+.rightbarcheckoutaddrbox {
     text-align: left;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color: transparent;
     border: 1px solid #000000;
     padding: 20px;
@@ -114,20 +111,19 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
-  .box h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  .rightbarcheckoutaddrbox h2 {
+    font-size: 1.3rem;
   }
   
-  .box p {
+  .rightbarcheckoutaddrbox p {
     font-size: 1rem;
   }
 
 
 
-.paybox {
+.rightbarcheckoutpaybox {
     text-align: left;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color: transparent;
     border: 1px solid #000000;
     padding: 20px;
@@ -135,21 +131,20 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
-  .paybox h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  .rightbarcheckoutpaybox h2 {
+    font-size: 1.3rem;
   }
   
-  .paybox p {
+  .rightbarcheckoutpaybox p {
     text-align: left;
     font-size: 1rem;
   }
 
 
 
-.orderbox {
+.rightbarcheckoutorderbox {
     text-align: left;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color: transparent;
     border: 1px solid #000000;
     padding: 20px;
@@ -157,35 +152,33 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
-  .orderbox h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  .rightbarcheckoutorderbox h2 {
+    font-size: 1.3rem;
   }
   
-  .orderbox p {
+  .rightbarcheckoutorderbox p {
     text-align: left;
     font-size: 1rem;
   }
 
 
 
-.Down
+.rightbarcheckoutDown
 {
-    flex:4;
-    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
 }
-.placingorder
+.rightbarcheckoutplacingorder
 {
-    margin-left: 3rem;
-    background-color: black;
     outline: none;
     color: white;
-    border-radius: 1rem;
-    width: 7rem;
-    height: 2rem;
+    border-radius: 0.8rem;
+    width: 100%;
 }
-.placingorder:hover
+.rightbarcheckoutplacingorder:hover
 {
-    background-color:  rgb(54, 122, 226);
-    border-width: 0;
+    background-color:  rgb(82, 86, 95);
+    width: 100%;
 }

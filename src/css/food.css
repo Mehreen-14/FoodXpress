@@ -1,6 +1,6 @@
 .foodContainer
 {
-     margin:1rem 1rem;
+     margin:2rem 1rem;
      border-radius:1rem;
      height: 15rem;
      width:15rem;
@@ -65,7 +65,7 @@
 .foodName
 {
     font-weight: bold;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     height: 3rem;
 
 }

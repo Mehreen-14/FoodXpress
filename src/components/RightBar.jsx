@@ -54,7 +54,7 @@ function Rightbar(props)
     // )
 
 
-    const [state, changestate] = React.useState(false);
+    const [state, changestate] = React.useState(true);
     const navigate = useNavigate();
     const Checkout =  (e) => {
       e.preventDefault();

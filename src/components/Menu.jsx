@@ -39,7 +39,7 @@ function Menu(props) {
             )
       }
      console.log("laaaala");
-     console.log(props.RestaurantInfo);
+     console.log(props.restaurant_data);
      
       return (<div className="menu">
             <div className="Restaurantdesign">

@@ -81,23 +81,7 @@ function Restaurant()
     {
            
             console.log("in update");
-            // const datat = window.localStorage.getItem('MY_APP_STATE');
-            // if ( datat !== null ) setAuth(JSON.parse(datat));
-            
-          
-            //     const addCartToDatabase = async () => {
-            //         try {
-            //             const response = await hostWeb.post(`/order/incrementItemInCart`,{item_id:input.item_id},{
-            //                 headers:{
-            //                     auth_key:"Bearer "+JSON.parse(datat).auth_token,
-            //                 },
-            //             });
-            //             console.log(response);
-            //         } catch (error) {
-            //             console.log("error fetching data RestaurantHome");
-            //         }
-            //     }
-            //     addCartToDatabase();
+
             
         const newState = list.map(obj => {
             // 👇️ if id equals 2, update country property
@@ -138,7 +122,10 @@ function Restaurant()
                 try {
                     const response = await hostWeb.post(`/restaurant/getmenu`,{ "restaurant_id": id });
                     setRestaurantinfo(response.data.data);
+                    console.log("3---");
+                    console.log(response.data);
                     setresinfo(response.data.restaurant_data);
+                    
                 } catch (error) {
                     console.log("error fetching data getRestaurentMenu");
                 }
