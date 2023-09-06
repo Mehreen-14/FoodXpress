@@ -1,0 +1,111 @@
+.cartContainer
+{
+    flex:5;
+    padding:2rem;
+    margin-left: 20rem;
+    color:rgb(10, 35, 32);
+    margin-right: 20rem;
+   
+    
+}
+
+.mycart
+{
+    font-family: 'Times New Roman', serif;
+    font-size: 45px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: left;
+
+}
+
+.mycart2
+{
+    margin-top: 2rem;
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight:500;
+    font-style: normal;
+    line-height: 1.6;
+    text-align: left;
+
+}
+
+.box {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    padding: 20px; /* Add padding as needed */
+  }
+  
+  .image {
+    width: 100px; /* Set the width of the image */
+    height: 100px; /* Set the height of the image */
+    /* Add other image styles as needed */
+  }
+  
+  .text {
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  .buttons {
+    display: flex;
+    margin-left: 46rem;
+    flex-direction: row-reverse; 
+    justify-content: space-around;
+  }
+  
+  .plus-button,
+  .minus-button {
+    margin: 5px 0; /* Add vertical margin to separate the buttons */
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+  }
+  
+  .plus-button:hover,
+  .minus-button:hover {
+    background-color: #0056b3;
+  }
+
+.Icons
+{
+   
+  
+   margin-top: 2rem;
+   display: flex;
+   /* justify-content: space-around; */
+   align-items: center;
+}
+.IconItem{
+
+    position: relative;
+    cursor: pointer;
+    background-color:#D8D8D8;
+    border-radius:100%;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+    margin: 0 1.2rem;
+    border-width: 0;
+    outline: none;
+    /* background-color: transparent; */
+
+   
+}
+.textop
+{
+    margin-top: 1rem;
+    text-align: left;
+    margin-left: -0.5rem;
+}

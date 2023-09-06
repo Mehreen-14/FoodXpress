@@ -14,11 +14,9 @@ function Restaurant()
     console.log(hehe.Restaurantinfo.data);
     console.log(hehe.Cartinfo);
     const [restaurantinfo,setRestaurantinfo] = useState([]);
-    const [RestaurantInfo,setRestaurantName] =useState([]);
     const[list,changecart]=React.useState([]);
-    // const [initialSate,changestate]=React.useState(true);
-    // const [isedit,changedit]=React.useState(false);
-    // const [newitem,changeitem]=React.useState({});
+    const [resinfo, setresinfo] = useState({});
+
     function addToCart(input)
     {
 
@@ -140,42 +138,19 @@ function Restaurant()
                 try {
                     const response = await hostWeb.post(`/restaurant/getmenu`,{ "restaurant_id": id });
                     setRestaurantinfo(response.data.data);
-                } catch (error) {
-                    console.log("error fetching data getRestaurentMenu");
-                }
-            }
-            const fetchRestaurantName = async() =>
-            {
-                try {
-                    const response = await hostWeb.post(`/restaurant/getRestaurantById`,{ "restaurant_id": id });
-                    setRestaurantName(response.data.data);
-                    //setRestaurantName
-                    console.log(response);
-                    console.log("nam nicchi");
+                    setresinfo(response.data.restaurant_data);
                 } catch (error) {
                     console.log("error fetching data getRestaurentMenu");
                 }
             }
             fetchData();
             fetcart ();
-            fetchRestaurantName();
+
     },[id]);
-//     useEffect(()=>{
-            
-//         const fetchData = async () =>{
-//             try {
-//                 const response = await hostWeb.get(`/order/getCart`);
-//                 setRestaurantinfo(response.data.data);
-//             } catch (error) {
-//                 console.log("error fetching data getRestaurentMenu");
-//             }
-//         }
-//         fetchData();
-// },[id]);
     return(
         <div className="RestaurantConatainer">
            <Sidebar/>
-           <Menu data={restaurantinfo} addToCart={addToCart} RestaurantInfo={RestaurantInfo[0]} /> 
+           <Menu data={restaurantinfo} addToCart={addToCart} restaurant_data={resinfo} /> 
            <Rightbar CartArray={list} update={update} />
         </div>
     )

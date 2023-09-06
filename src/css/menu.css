@@ -5,14 +5,6 @@
     margin-left: 20rem;
     color:rgb(10, 35, 32);
 }
-.RestaurantName
-{
-    color:rgb(10, 35, 32);
-}
-.RestaurantLocation
-{
-    color: gray;
-}
 .navfood
 {
     
@@ -68,4 +60,31 @@ a
      padding-left: 1.2rem;
      margin: 2rem 0;
      width: 100%;
+}
+.Restaurantdesign
+{
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+.RestaurantName
+{
+    
+    color:rgb(10, 35, 32);
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.RestaurantLocation
+{
+    color: gray;
+}
+.navhr
+{
+    color: gray;
+    margin-left: 2rem;
+    border-width: 0.3rem;
+}
+.navitem:hover
+{
+    color: gray;
 }

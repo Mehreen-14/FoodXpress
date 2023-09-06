@@ -111,8 +111,6 @@ function Rightbar(props)
                         <div className="approxtime">ASAP(34 min)</div>
 
                     </div>
-
-
                     {props.CartArray.map(fetch_cart)}
                     <hr className="dividecart" />
                     <div className="showtotalMoney">
