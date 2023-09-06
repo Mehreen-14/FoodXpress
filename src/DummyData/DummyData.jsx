@@ -29,43 +29,42 @@ const RestList = {
 }
 
 const Cartinfo=
-[
-    {   
-        foodname:"Beef Burger",
-        Restaurantname:"Chillox",
-        id:1,
-        MoneyperPiece:300,
-        img:"",
-        count:1
-
+{
+  "success": true,
+  "data": [
+    {
+      "item_id": 12,
+      "item_name": "Smokey BBQ Chicken Cheese Burger",
+      "image": null,
+      "amount": 2,
+      "price": 250,
+      "total_price": 500,
+      "restaurant_name": "Chillox",
+      "restaurant_id": 1
     },
     {
-        foodname:"Beef Burger",
-        Restaurantname:"The Munch Station",
-        id:2,
-        MoneyperPiece:200,
-        img:"",
-        count:2
+      "item_id": 1,
+      "item_name": "Nutella Chocolate Waffle",
+      "image": null,
+      "amount": 2,
+      "price": 150,
+      "total_price": 300,
+      "restaurant_name": "Waffle Time",
+      "restaurant_id": 4
     },
     {
-        foodname:"supreme cheese Burger",
-        Restaurantname:"Chillox",
-        id:3,
-        MoneyperPiece:250,
-        img:"",
-        count:3
-    },
-    {
-      foodname:"supreme cheese Burger",
-      Restaurantname:"Chillox",
-      id:4,
-      MoneyperPiece:250,
-      img:"",
-      count:3
-  }
-
-];
-
+      "item_id": 2,
+      "item_name": "Nutshell Banana Waffle",
+      "image": null,
+      "amount": 3,
+      "price": 160,
+      "total_price": 480,
+      "restaurant_name": "Waffle Time",
+      "restaurant_id": 4
+    }
+  ],
+  "total_price": 1280
+};
 const Restaurantinfo=
 {
   "success": true,

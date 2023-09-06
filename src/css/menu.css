@@ -5,7 +5,14 @@
     margin-left: 20rem;
     color:rgb(10, 35, 32);
 }
-
+.RestaurantName
+{
+    color:rgb(10, 35, 32);
+}
+.RestaurantLocation
+{
+    color: gray;
+}
 .navfood
 {
     
