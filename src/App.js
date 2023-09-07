@@ -11,6 +11,7 @@ import Checkout from "./routes/Checkout.jsx";
 import OrderProgress from "./routes/OrderProgress.jsx";
 import Myorders from "./routes/Myorders.jsx";
 import MyOrderDetails from "./routes/MyOrderDetails.jsx";
+import SetAddr from "./routes/SetAddr.jsx";
 function App() {
     const [signIn, toggle] = React.useState(true);
      return(
@@ -27,6 +28,7 @@ function App() {
                         <Route exact path="/OrderProgress" Component={OrderProgress}/>
                         <Route exact path="/Myorders" Component={Myorders}/>
                         <Route exact path="/MyorderDetails/:orderid" Component={MyOrderDetails}/>
+                        <Route exact path="/SetAddr" Component={SetAddr}/>
 
                     </Routes >
                 </Router>

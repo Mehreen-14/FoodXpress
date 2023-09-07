@@ -28,7 +28,7 @@ function Sidebar(props)
         navigate(`/`);
     }
     const goAddr = async () => {
-        
+        navigate(`/SetAddr`)
 
     }
 

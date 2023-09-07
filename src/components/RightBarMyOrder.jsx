@@ -55,7 +55,7 @@ function RightBarMyOrder(props) {
                 <p>Delivery Fee : 0</p>
                 <p>VAT : 0%</p>
                 <hr />
-                <p>Total : {props.total} </p>
+                <p>Total : {props.total + 30 + (props.total * 0.05)} </p>
             </div>
             </div>
 
