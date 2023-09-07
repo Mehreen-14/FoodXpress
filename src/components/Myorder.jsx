@@ -18,7 +18,7 @@ function Myorder(props)
         
         const gotoMyOrderPage = () =>{
             console.log("clicking")
-            navigate(`/MyorderDetails/${order.order_id}`,{ state: "dummy" });
+            navigate(`/MyorderDetails/${order.order_id}`);
         }
         return(
             <div className="myorderitem" >

@@ -27,6 +27,10 @@ function Sidebar(props)
         window.localStorage.removeItem('MY_APP_STATE');
         navigate(`/`);
     }
+    const goAddr = async () => {
+        
+
+    }
 
 
     return(
@@ -42,7 +46,7 @@ function Sidebar(props)
            </div>
            <div className="Mid">
             <button className="Option" onClick={gotohome}><Home className="Icon"/>Home</button>
-            <button className="Option"><LocationOn className="Icon"/>Addresses</button>
+            <button className="Option" onClick={goAddr}><LocationOn className="Icon"/>Addresses</button>
             <button className="Option" onClick={goMyorders}><Article className="Icon"/>My Orders</button>
            </div>
            <div className="Down">
