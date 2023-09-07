@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 function itemName(item)
 {
     return (
-        <p>
+        <span>
             {item.amount}X{item.item_name}
-        </p>
+        </span>
     )
 }
 function Myorder(props)
