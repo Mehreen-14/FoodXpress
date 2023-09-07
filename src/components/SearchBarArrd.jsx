@@ -31,7 +31,7 @@ export default function SearchBarAddr() {
 
   const showaddr = (item) => {
     return(
-        <div onClick={(event)=> setaddr(event,item.location)}>
+        <div className="searchitems" onClick={(event)=> setaddr(event,item.location)}>
              {item.name}
         </div>
     )

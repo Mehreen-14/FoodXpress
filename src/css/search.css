@@ -19,3 +19,17 @@
 .searchBox::placeholder{
     color: #909090;
 }
+
+.searchitems{
+    margin: 1rem;
+    width: 100%;
+    padding: 1rem;
+
+}
+.searchitems:hover{
+    margin: 1rem;
+    width: 100%;
+    border-radius: 10rem;
+    background-color: rgb(196, 189, 189);
+
+}
