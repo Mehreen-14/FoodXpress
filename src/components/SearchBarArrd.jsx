@@ -1,15 +1,36 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../css/search.css"
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import AuthContext from "../context/AuthProvider";
+import hostWeb from "../apis/hostWeb";
 
 export default function SearchBarAddr() {
+    const { auth, setAuth } = useContext(AuthContext);
   const [search, setSearch] = useState("");
   const [data,setData] = useState([]);
   const navigate = useNavigate();
+
+  const setaddr = async (event,adata) => {
+    const datat = window.localStorage.getItem('MY_APP_STATE');
+        if (datat !== null) setAuth(JSON.parse(datat));
+    try {
+        const response = await hostWeb.post(`/auth/saveLocation`,{
+            x_coord: adata[0],
+            y_coord: adata[1]
+        }, {
+            headers: {
+                auth_key: "Bearer " + JSON.parse(datat).auth_token,
+            },
+        });            
+    } catch (error) {
+        console.log("error fetching data myorderdetails");
+    }
+  }
+
   const showaddr = (item) => {
     return(
-        <div>
+        <div onClick={(event)=> setaddr(event,item.location)}>
              {item.name}
         </div>
     )
