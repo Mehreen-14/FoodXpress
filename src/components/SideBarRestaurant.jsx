@@ -7,8 +7,15 @@ import hostWeb from "../apis/hostWeb";
 
 function SidebarRestaurant(props)
 {
+    const navigate = useNavigate();
     
-    
+    const logout = async(e) => {
+        e.preventDefault();
+
+        setAuth({});
+        window.localStorage.removeItem('MY_APP_STATE');
+        navigate(`/`);
+    }
   const {auth, setAuth} = useContext(AuthContext);
   const [data,setData] = useState({});
   useEffect(()=>{
@@ -41,7 +48,7 @@ function SidebarRestaurant(props)
             <button className="Option" ><Home className="Icon"/>Home</button>
            </div>
            <div className="Down">
-            <button className="logoutbutton">Log out</button>
+            <button className="logoutbutton" onClick={logout}>Log out</button>
            </div>
         </div>
     )
