@@ -26,4 +26,12 @@
     border-radius: 2rem;
     margin: 1rem 0;
     padding: 2%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.myorderdetail{
+    height: 3rem;
+    width: 20rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -21,7 +21,7 @@ function RightBarCheckOut(props) {
         } catch (error) {
             console.log("error fetching data checkout");
         }
-        navigate("/OrderProgress");
+        navigate("/home");
     };
 
 
@@ -75,7 +75,7 @@ function RightBarCheckOut(props) {
                 <p>Delivery Fee : {30}</p>
                 <p>VAT : 5%</p>
                 <hr />
-                <p>Total : {props.total - 30 - (props.total * 0.05)} </p>
+                <p>Total : {props.total + 30 + (props.total * 0.05)} </p>
             </div>
 
 

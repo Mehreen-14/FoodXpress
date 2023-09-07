@@ -25,7 +25,7 @@ function Myorder(props)
             <div onClick={gotoMyOrderPage}>
             #{order.order_id}({order.order_status})
             </div>
-              <div>
+              <div className="myorderdetail">
               {order.items.map(itemName)}
               </div>
               <div>
