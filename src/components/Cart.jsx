@@ -14,8 +14,6 @@ function Cart(props) {
         props.cartinfo.amount = count;
         console.log(count);
         props.somethingisChnaged(props.cartinfo);
-
-
     }, [count]);
     function increase() {
         changeCount(count + 1);

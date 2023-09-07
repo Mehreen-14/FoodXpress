@@ -63,17 +63,11 @@ function Rightbar(props)
     function somethingisChnaged(item)
     {
         console.log(item.amount);
-        if(item.amount>0)
+        if(item.amount>=0)
         {
             item.total_price=item.price * item.amount;
             props.update(item,item.item_id);
-            console.log("lara please relax!");
-            console.log(item.item_name);
         }
-        // else
-        // {
-            
-        // }
         
     }
     function fetch_cart(cartItems) {
@@ -115,7 +109,7 @@ function Rightbar(props)
                     <hr className="dividecart" />
                     <div className="showtotalMoney">
                         <div >Sub Total</div>
-                        <div>Tk.500</div>
+                        <div>Tk.{props.total_price}</div>
                     </div>
                     <button className="checkoutbutton" onClick={Checkout} > <span className="arrowsign"> Checkout </span><ArrowForward /></button>
 

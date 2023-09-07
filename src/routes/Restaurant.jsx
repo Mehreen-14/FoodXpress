@@ -11,11 +11,10 @@ function Restaurant()
 {
     const {auth, setAuth} = useContext(AuthContext);
     const { id } = useParams();
-    console.log(hehe.Restaurantinfo.data);
-    console.log(hehe.Cartinfo);
     const [restaurantinfo,setRestaurantinfo] = useState([]);
     const[list,changecart]=React.useState([]);
     const [resinfo, setresinfo] = useState({});
+    const[total_price,changetotalprice] =React.useState(0);
 
     function addToCart(input)
     {
@@ -31,25 +30,7 @@ function Restaurant()
           });
         
           if (isFound) {
-                
-            const datat = window.localStorage.getItem('MY_APP_STATE');
-            if ( datat !== null ) setAuth(JSON.parse(datat));
-            
-          
-                const addCartToDatabase = async () => {
-                    try {
-                        const response = await hostWeb.post(`/order/incrementItemInCart`,{item_id:input.item_id},{
-                            headers:{
-                                auth_key:"Bearer "+JSON.parse(datat).auth_token,
-                            },
-                        });
-                        console.log(response);
-                    } catch (error) {
-                        console.log("error fetching data RestaurantHome");
-                    }
-                }
-                addCartToDatabase();
-                update(input,input.item_id)
+                ;
           }
         else {
             
@@ -98,7 +79,8 @@ function Restaurant()
         //   console.log(list);
     }
     useEffect(() => {
-       
+        const  sum=list.reduce((a,v) =>  a = a + v.total_price , 0 );
+        changetotalprice(sum);
         console.log(list);
     }, [list]);
 
@@ -114,6 +96,7 @@ function Restaurant()
                     },
                 });
                 changecart(response.data.data);
+                changetotalprice(response.data.total_price);
             } catch (error) {
                 console.log("error fetching data RestaurantHome");
             }
@@ -138,10 +121,9 @@ function Restaurant()
         <div className="RestaurantConatainer">
            <Sidebar/>
            <Menu data={restaurantinfo} addToCart={addToCart} restaurant_data={resinfo} /> 
-           <Rightbar CartArray={list} update={update} />
+           <Rightbar CartArray={list} update={update} total_price={total_price} />
         </div>
     )
-// /order/getCart
    
 
 }

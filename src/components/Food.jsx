@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "../css/food.css"
 import { Add } from '@mui/icons-material';
@@ -6,6 +6,14 @@ import { Add } from '@mui/icons-material';
 
 
 function Food(props) {
+
+        const [isrestaurant,Setisrestaurant]=React.useState(true);
+        useEffect(()=>{
+                if(window.location.href.includes('/restaurant/'))
+                {
+                        Setisrestaurant(false);
+                }
+        },[]);
 
         function additemtocart()
         {
@@ -21,6 +29,7 @@ function Food(props) {
           
             <div className="des">
                     <div className="foodName">{props.data.item_name}</div>
+                    {isrestaurant&&<div className="fooddescription">{props.data.restaurant_name}</div>}
                     <div className="fooddescription">{props.data.item_description}</div>
             </div>  
             <div className="MoneyPlus">

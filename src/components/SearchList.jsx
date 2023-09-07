@@ -3,6 +3,7 @@ import hostWeb from '../apis/hostWeb';
 import "../css/restaurantlist.css"
 import RestaurantCard from './RestaurantCard';
 import RestaurantItemCard from './RestaurantItemCard';
+import Food from './Food';
 
 function restaurantlist(items) {
 
@@ -10,14 +11,19 @@ function restaurantlist(items) {
               <RestaurantCard data={items}/>
     )
 }
-function itemlist(item){
-    return(
-        <RestaurantItemCard data={item}/>
-    )
-}
+
 
 const SearchList = (props) => {
-    console.log(props.searchBy);
+    function notifyCart(item)
+    {
+          item.amount=1;
+          props.addToCart(item);
+    }
+    function itemlist(item){
+        return(
+            <Food data={item} notifyCart={notifyCart}/>
+        )
+    }
     const [restaurants,setRestaurants] = useState([]);
     const [items,setItems] = useState([]);
     useEffect(()=>{
