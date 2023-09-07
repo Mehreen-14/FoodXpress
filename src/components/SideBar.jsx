@@ -16,7 +16,10 @@ function Sidebar(props)
     const gotohome = () => {
         navigate(`/home`);
     }
-
+    const goMyorders = () =>
+    {
+        navigate(`/Myorders`);
+    }
     const logout = async(e) => {
         e.preventDefault();
 
@@ -40,7 +43,7 @@ function Sidebar(props)
            <div className="Mid">
             <button className="Option" onClick={gotohome}><Home className="Icon"/>Home</button>
             <button className="Option"><LocationOn className="Icon"/>Addresses</button>
-            <button className="Option"><Article className="Icon"/>My Orders</button>
+            <button className="Option" onClick={goMyorders}><Article className="Icon"/>My Orders</button>
            </div>
            <div className="Down">
             <button className="logoutbutton" onClick={logout}>Log out</button>

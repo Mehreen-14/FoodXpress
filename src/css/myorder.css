@@ -1,0 +1,29 @@
+.orderContainer
+{
+    flex:5;
+    margin-left: 19.2rem;
+    padding-top: 5rem;
+    padding-left: 2rem;
+}
+.heading
+{
+   color:rgb(8, 15, 24);
+   font-weight: bold;
+   font-size: 2rem;
+   margin-bottom: 2rem;
+}
+.showmyorders
+{
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.myorderitem
+{
+    height: 10rem;
+    width: 40rem;
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    padding: 2%;
+}

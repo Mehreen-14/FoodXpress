@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import "../css/restaurantlist.css"
 import Food from "./Food";
 import RestaurantCard from "./RestaurantCard";
 import hostWeb from "../apis/hostWeb";
+import AuthContext from "../context/AuthProvider";
 
 function categorylist(items) {
 
@@ -13,10 +14,17 @@ function categorylist(items) {
 
 function RestaurantList(props) {
     const [data,setData] = useState([]);
+    const { auth, setAuth } = useContext(AuthContext);
     useEffect(()=>{
+      const datat = window.localStorage.getItem('MY_APP_STATE');
+      if (datat !== null) setAuth(JSON.parse(datat));
             const fetchData = async () =>{
                 try {
-                    const response = await hostWeb.get(`restaurant/getAllRestaurants`);
+                    const response = await hostWeb.get(`restaurant/getAllRestaurants`,{
+                        headers: {
+                          auth_key: "Bearer " + JSON.parse(datat).auth_token,
+                        },
+                      });
                     setData(response.data.data);
                 } catch (error) {
                     console.log("error fetching data getRestaurentList");

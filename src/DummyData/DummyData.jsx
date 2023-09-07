@@ -208,10 +208,40 @@ const Restaurantinfo=
 }
 ;
 
+const myorder=[
+{
+  "order_id": 32,
+  "order_status": "running",
+  "total": "510",
+  "start_time": null,
+  "end_time": null,
+  "delivery_fee": "30",
+  "items": [
+    {
+      "item_id": 12,
+      "item_name": "Smokey BBQ Chicken Cheese Burger",
+      "amount": 1,
+      "price": 250,
+      "item_total_price": 250,
+      "restaurant_name": "Chillox"
+    },
+    {
+      "item_id": 13,
+      "item_name": "Chicken Sausage Burger",
+      "amount": 1,
+      "price": 230,
+      "item_total_price": 230,
+      "restaurant_name": "Chillox"
+    }
+  ]
+},
+]
+
 const hehe = {
   "RestList" : RestList,
   "Cartinfo" : Cartinfo,
-  "Restaurantinfo" : Restaurantinfo
+  "Restaurantinfo" : Restaurantinfo,
+  "myorder" :myorder
 }
 
 export default hehe;

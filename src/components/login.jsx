@@ -17,6 +17,8 @@ const LogIn = () => {
         e.preventDefault();
         try {
             const response = await hostWeb.post(`/auth/login`,{email,password});
+            console.log("korlam kisu")
+            console.log(response.data.data);
             setAuth(response.data.data);
             console.log(response.data.data.type);
             if(response.data.success){

@@ -9,7 +9,8 @@ import Search from "./routes/Search.jsx"
 import RestaurantHome from "./routes/RestaurantHome.jsx";
 import Checkout from "./routes/Checkout.jsx";
 import OrderProgress from "./routes/OrderProgress.jsx";
-
+import Myorders from "./routes/Myorders.jsx";
+import MyOrderDetails from "./routes/MyOrderDetails.jsx";
 function App() {
     const [signIn, toggle] = React.useState(true);
      return(
@@ -24,6 +25,9 @@ function App() {
                         <Route exact path="/restauranthome/:id" Component={RestaurantHome}/>
                         <Route exact path="/Checkout" Component={Checkout}/>
                         <Route exact path="/OrderProgress" Component={OrderProgress}/>
+                        <Route exact path="/Myorders" Component={Myorders}/>
+                        <Route exact path="/MyorderDetails/:orderid" Component={MyOrderDetails}/>
+
                     </Routes >
                 </Router>
             </AuthProvider>
